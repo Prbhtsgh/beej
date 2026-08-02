@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-struct car {
-	char *name;
-	float price;
-	int speed;
-};
+
 
 int main(void)
 {
-	struct car saturn = {.speed = 175, .name = "Saturn SL/2"};
+	FILE *fp;
+	int c;
 
-	struct car *c = &saturn;
-	printf("%p\n", *c);
+	fp = fopen("hello.txt", "r");
+
+	while ((c = fgetc(fp)) != EOF)
+		printf("%c", c);
+
+	fclose(fp);
 }
