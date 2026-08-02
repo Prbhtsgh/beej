@@ -1,13 +1,16 @@
 #include <stdio.h>
 
+struct car {
+	char *name;
+	float price;
+	int speed;
+};
+
 int main(void)
 {
-	int a;
-	int *p;
+	struct car saturn = {.speed = 175, .name = "Saturn SL/2"};
 
-	a = 10;
+	void set_price(struct car *c, float new_price);
 
-	p = &a;
-	
-	printf("address of %d is %p\n", a, p);
+	printf("Price: %f\n", saturn.price);
 }
