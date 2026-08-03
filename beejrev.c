@@ -1,12 +1,19 @@
 #include <stdio.h>
 
+struct car {
+	char name;
+	float price;
+	int speed;
+};
+
 int main(void)
 {
-	int i;
-	int a[5] = {22, 37, 88, 99, 91};
+	struct car saturn = {.speed = 175; .name = "Saturn SL/2"};
 
-	for(int i = 0; i < 5; i++)
+	void set_price(struct car *c, float new_price);
 	{
-		printf("%d\n", a[i]);
+		c -> price = new_price;
 	}
+
+	printf("Price: %f\n", saturn.price);
 }

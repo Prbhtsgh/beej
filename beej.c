@@ -5,12 +5,15 @@
 int main(void)
 {
 	FILE *fp;
-	int c;
+	int x =32;
 
-	fp = fopen("hello.txt", "r");
+	fp = fopen("hello.txt", "w");
 
-	while ((c = fgetc(fp)) != EOF)
-		printf("%c", c);
+	fputc('B', fp);
+	fputc('\n', fp);
+
+	fprintf(fp, "x = %d\n", x);
+	fputs("Hello, World!\n", fp);
 
 	fclose(fp);
 }
