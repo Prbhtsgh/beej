@@ -1,18 +1,12 @@
 #include <stdio.h>
 
-void increment(int *p)
-{
-	*p = *p + 1;
-}
-
 int main(void)
 {
-	int i =10;
-	int *j = &i;
+	int i;
+	int a[5] = {22, 37, 88, 99, 91};
 
-	printf("i is %d\n", i);
-	printf("i is also %d\n", *j);
-
-	increment(j);
-	printf("i is %d\n", i);
+	for(int i = 0; i < 5; i++)
+	{
+		printf("%d\n", a[i]);
+	}
 }
