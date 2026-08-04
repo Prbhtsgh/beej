@@ -1,19 +1,11 @@
 #include <stdio.h>
 
-struct car {
-	char name;
-	float price;
-	int speed;
-};
+typedef struct {
+	int x, y;
+}point;
 
-int main(void)
-{
-	struct car saturn = {.speed = 175; .name = "Saturn SL/2"};
+int main(void){
+	point p = {.x = 20, .y = 40};
 
-	void set_price(struct car *c, float new_price);
-	{
-		c -> price = new_price;
-	}
-
-	printf("Price: %f\n", saturn.price);
+	printf("%d, %d\n", p.x, p.y);
 }
