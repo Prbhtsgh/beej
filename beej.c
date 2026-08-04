@@ -4,16 +4,13 @@
 
 int main(void)
 {
-	FILE *fp;
-	int x =32;
+	int a[] = {11, 22, 33, 44, 55, 999};
 
-	fp = stdout;
-
-	fputc('B', fp);
-	fputc('\n', fp);
-
-	fprintf(fp, "x = %d\n", x);
-	fputs("Hello, World!\n", fp);
-
-	fclose(fp);
+	int *p = &a[0];
+	while(*p != 999)
+	{
+		printf("%p\n", p);
+		printf("%d\n", *p);
+		p++;
+	}
 }
